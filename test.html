@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Button</title>
+</head>
+<body>
+
+  <button 
+    onclick="addRecommendedStocks(event)"
+    class="bg-green-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+  >
+    Add Recommended Weekly Stocks
+  </button>
+
+  <script>
+    async function addstock(symbol) {
+      console.log("Start bot for:", symbol);
+    }
+
+    async function addRecommendedStocks(event) {
+      console.log("Button clicked");
+      event.preventDefault();
+
+      const stockSymbols = ["RELIANCE", "TCS", "INFY"];
+      for (const symbol of stockSymbols) {
+        await addstock(symbol);
+      }
+    }
+  </script>
+
+</body>
+</html>
